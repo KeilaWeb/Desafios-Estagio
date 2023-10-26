@@ -36,7 +36,7 @@ section{
     
 }
 
-#visor {    
+.visor {    
     color: black;
     background: #ffffff;
     border: none;
@@ -46,27 +46,37 @@ section{
     margin: 0px 0px 15px 0px;
 }
 
-#adicionaNoVisor {
+input{
+    padding: 15px; 
+    margin: 6px;
+    background-color: white;
+    border: none;
+    line-height: 14px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 6px rgba(99, 99, 99, 0.315); 
+}
+
+.adicionaNoVisor {
     padding: 12px 15px 12px 15px; 
     margin: 6px;
     background-color: white;
     border: none;
     line-height: 14px;
-    border-radius: 100%;
+    border-radius: 50px;
     box-shadow: 2px 2px 6px rgba(99, 99, 99, 0.315);   
 }
 
-#adicionaNoVisorzero {
+.adicionaNoVisorzero {
     padding: 12px 45px 12px 45px; 
     margin: 6px;
     background-color: white;
     border: none;
     line-height: 14px;
-    border-radius: 45%;
+    border-radius: 20px;
     box-shadow: 2px 2px 6px rgba(99, 99, 99, 0.315);   
 }
 
-#adicionaNotexto {
+.adicionaNotexto {
     padding: 0px; 
     margin: 6px;
     font-size: 10px;
@@ -74,6 +84,6 @@ section{
     background-color: white;
     border: none;
     line-height: 14px;
-    border-radius: 45%;
+    border-radius: 20%;
 }
 

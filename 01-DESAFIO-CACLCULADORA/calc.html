@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="wclassth=device-width, initial-scale=1.0">
     <title>Calculadora Web Simples</title>
     <link rel="stylesheet" href="estilo.style.css">    
 </head>
@@ -12,35 +12,28 @@
             <input type="text" id="visor" disabled>
             <div class="botao" id="botao">  
                 
-                <button onclick="limpaVisor()" id="adicionaNotexto">Calculadora Lyncas</button> 
-                <button onclick="limpaVisor()" id="adicionaNoVisor">C</button> 
-                <button onclick="calculaResultado('=')" id="adicionaNoVisor">=</button><br>
+                <button onclick="limpaVisor()" class="adicionaNotexto">Calculadora Lyncas</button> 
+                <button value="" onclick="limpaVisor()" class="adicionaNoVisor">C</button> 
+                <button onclick="calculaResultado('=')" class="adicionaNoVisor">=</button><br>
 
-                <button onclick="adicionaNoVisor(9)" id="adicionaNoVisor">9</button>
-                <button onclick="adicionaNoVisor(8)" id="adicionaNoVisor">8</button>
-                <button onclick="adicionaNoVisor(7)" id="adicionaNoVisor">7</button>
-                <button onclick="adicionaNoVisor('+')" id="adicionaNoVisor">+</button><br>
+                <button value="9" onclick="adicionaNoVisor(9)" class="adicionaNoVisor">9</button>
+                <button value="8" onclick="adicionaNoVisor(8)" class="adicionaNoVisor">8</button>
+                <button value="7" onclick="adicionaNoVisor(7)" class="adicionaNoVisor">7</button>
+                <button value="+" onclick="adicionaNoVisor('+')" class="adicionaNoVisor">+</button><br>
 
-                <button onclick="adicionaNoVisor(6)" id="adicionaNoVisor">6</button>
-                <button onclick="adicionaNoVisor(5)" id="adicionaNoVisor">5</button>
-                <button onclick="adicionaNoVisor(4)" id="adicionaNoVisor">4</button>
-                <button onclick="adicionaNoVisor('-')" id="adicionaNoVisor">-</button><br>
+                <button value="6" onclick="adicionaNoVisor(6)" class="adicionaNoVisor">6</button>
+                <button value="5" onclick="adicionaNoVisor(5)" class="adicionaNoVisor">5</button>
+                <button value="4" onclick="adicionaNoVisor(4)" class="adicionaNoVisor">4</button>
+                <button value="-" onclick="adicionaNoVisor('-')" class="adicionaNoVisor">-</button><br>
 
-                <button onclick="adicionaNoVisor(3)" id="adicionaNoVisor">3</button>
-                <button onclick="adicionaNoVisor(2)" id="adicionaNoVisor">2</button>
-                <button onclick="adicionaNoVisor(1)" id="adicionaNoVisor">1</button>
-                <button onclick="adicionaNoVisor('*')" id="adicionaNoVisor">*</button><br>
+                <button value="3" onclick="adicionaNoVisor(3)" class="adicionaNoVisor">3</button>
+                <button value="2" onclick="adicionaNoVisor(2)" class="adicionaNoVisor">2</button>
+                <button value="1" onclick="adicionaNoVisor(1)" class="adicionaNoVisor">1</button>
+                <button value="*" onclick="adicionaNoVisor('*')" class="adicionaNoVisor">*</button><br>
 
-                <button onclick="adicionaNoVisor(0)" id="adicionaNoVisorzero">0</button>                
-                <button onclick="adicionaNoVisor('.')" id="adicionaNoVisor">.</button> 
-                <button onclick="adicionaNoVisor('/')" id="adicionaNoVisor">/</button> 
-                <br> 
-                
-                
-                           
-                
-                              
-                
+                <button value="0" onclick="adicionaNoVisor(0)" class="adicionaNoVisorzero">0</button>                
+                <button value="." onclick="adicionaNoVisor('.')" class="adicionaNoVisor">.</button> 
+                <button value="/" onclick="adicionaNoVisor('/')" class="adicionaNoVisor">/</button>                 
 
             </div>
         </div>
