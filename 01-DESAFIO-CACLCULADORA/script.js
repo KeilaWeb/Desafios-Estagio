@@ -1,20 +1,21 @@
 var valor = document.getElementById('visor');
 var expressao = '';
 
-var clique = window.document.getElementById('botao')
+var clique = document.getElementById('botao')
 clique.addEventListener('click', clicar)
 
 
 function adicionaNoVisor(valor) {       
     expressao += valor;
-    visor.value = expressao;
-        
+    visor.value = expressao;        
 }
+
 
 function limpaVisor(){
     expressao = '';
     visor.value = '';
 }
+
 
 function calculaResultado(){
     try{
@@ -24,13 +25,9 @@ function calculaResultado(){
         visor.value = 'ERRO';
         expressao = '';
     }
-
-
+}
 
 function clicar(){
     clique.style.color = 'red'
 }
 
-
-
-}

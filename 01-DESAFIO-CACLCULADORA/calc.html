@@ -10,32 +10,38 @@
     <section>
         <div class="calculadora">
             <input type="text" id="visor" disabled>
-            <div class="botao" id="botao">
+            <div class="botao" id="botao">  
+                
+                <button onclick="limpaVisor()" id="adicionaNotexto">Calculadora Lyncas</button> 
+                <button onclick="limpaVisor()" id="adicionaNoVisor">C</button> 
+                <button onclick="calculaResultado('=')" id="adicionaNoVisor">=</button><br>
+
                 <button onclick="adicionaNoVisor(9)" id="adicionaNoVisor">9</button>
                 <button onclick="adicionaNoVisor(8)" id="adicionaNoVisor">8</button>
                 <button onclick="adicionaNoVisor(7)" id="adicionaNoVisor">7</button>
-                <button onclick="adicionaNoVisor('*')" id="adicionaNoVisor">*</button><br>
+                <button onclick="adicionaNoVisor('+')" id="adicionaNoVisor">+</button><br>
 
                 <button onclick="adicionaNoVisor(6)" id="adicionaNoVisor">6</button>
                 <button onclick="adicionaNoVisor(5)" id="adicionaNoVisor">5</button>
                 <button onclick="adicionaNoVisor(4)" id="adicionaNoVisor">4</button>
-                <button onclick="adicionaNoVisor('/')" id="adicionaNoVisor">/</button><br>
+                <button onclick="adicionaNoVisor('-')" id="adicionaNoVisor">-</button><br>
 
                 <button onclick="adicionaNoVisor(3)" id="adicionaNoVisor">3</button>
                 <button onclick="adicionaNoVisor(2)" id="adicionaNoVisor">2</button>
                 <button onclick="adicionaNoVisor(1)" id="adicionaNoVisor">1</button>
-                <button onclick="adicionaNoVisor('-')" id="adicionaNoVisor">-</button><br>
+                <button onclick="adicionaNoVisor('*')" id="adicionaNoVisor">*</button><br>
 
-                <button onclick="adicionaNoVisor(0)" id="adicionaNoVisor">0</button>
-                <button onclick="limpaVisor()" id="adicionaNoVisor">C</button>
-                <button onclick="calculaResultado('=')" id="adicionaNoVisor">=</button>
-                <button onclick="adicionaNoVisor('+')" id="adicionaNoVisor">+</button><br>
-
-                <button onclick="adicionaNoVisor(0)" id="adicionaNoVisor">0</button>
-                <button onclick="limpaVisor()" id="adicionaNoVisor">C</button>
-                <button onclick="adicionaNoVisor('+')" id="adicionaNoVisor">+</button>
-                <button onclick="calculaResultado('=')" id="adicionaNoVisor">=</button><br>
+                <button onclick="adicionaNoVisor(0)" id="adicionaNoVisorzero">0</button>                
+                <button onclick="adicionaNoVisor('.')" id="adicionaNoVisor">.</button> 
+                <button onclick="adicionaNoVisor('/')" id="adicionaNoVisor">/</button> 
+                <br> 
                 
+                
+                           
+                
+                              
+                
+
             </div>
         </div>
     </section>   
