@@ -1,4 +1,4 @@
-/* Reset de margem e preenchimento para todos os elementos */
+/* Reseta de margem e preenchimento para todos os elementos */
 * {
     margin: 0;
     padding: 0;
@@ -47,9 +47,9 @@ section {
     background-color: white;
     color: rgb(31, 31, 31);
     border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+    display: flex;  /* Define o estilo de layout como flexível (Flexbox) para o elemento body */
+    flex-direction: column; /* Define a direção do eixo principal do layout flexível como coluna */
+    text-align: center; /* Centraliza o conteúdo do elemento */
     box-shadow: 4px 4px 16px rgba(49, 49, 49, 0.534);
 }
 
@@ -77,12 +77,13 @@ section {
 }
 
 /* Estilos para os botões na calculadora */
-.botao-numero, .botao-numeroigual {
-    padding: 12px;
+.botao-numero{
+    width: 50px; /* Defina o tamanho desejado para todos os botões */
+    height: 50px; /* Defina a mesma altura dos botões */
+    padding: 0px;
     margin: 6px;
     background-color: white;
     border: 0;
-    line-height: 12px;
     border-radius: 20px;
     box-shadow: 2px 2px 6px rgba(99, 99, 99, 0.315);
     cursor: pointer;
@@ -90,12 +91,20 @@ section {
 
 .botao-numeroigual {
     grid-column: span 2;
+    height: 50px; /* Defina a mesma altura dos botões */
+    padding: 0px;
+    margin: 6px;
+    background-color: white;
+    border: 0;
+    border-radius: 20px;
+    box-shadow: 2px 2px 6px rgba(99, 99, 99, 0.315);
+    cursor: pointer;
 }
 
 .gradeBotao{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 3px;  
+    display: grid; /* Define o estilo de layout como uma grade (Grid) para o elemento com a classe .gradeBotao */
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* Especifica um modelo de grade com quatro colunas, cada uma ocupando uma fração igual do espaço disponível */
+    gap: 3px;  /* Define o espaçamento entre as células da grade */
 }
 
 .botao-numero:hover,

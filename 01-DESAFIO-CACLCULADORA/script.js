@@ -1,15 +1,15 @@
 //seleção dos elementos (atraves do DOM)
-const preverOperacaoTexto = document.querySelector("#prever-resultado") // Visor do cálculo de previsão
-const calculando = document.querySelector("#calculando") // Visor do cálculo sendo digitado
-const botoes = document.querySelectorAll("#gradeBotao button") // Todos os botões da calculadora
+const preverOperacaoTexto = document.querySelector("#prever-resultado"); // Visor do cálculo de previsão
+const calculando = document.querySelector("#calculando"); // Visor do cálculo sendo digitado
+const botoes = document.querySelectorAll("#gradeBotao button"); // Todos os botões da calculadora
 
 
 //Lógica da calcularora em JS POO
 class Calculado {
     constructor(preverOperacaoTexto, calculando){ //valores de fluxo da operação
-        this.preverOperacaoTexto = preverOperacaoTexto //Propriedades do objeto para não trabalhar diretamente com o DOM
-        this.calculando = calculando
-        this.calcula = "" //Valor que o usuário está digitando
+        this.preverOperacaoTexto = preverOperacaoTexto; //Propriedades do objeto para não trabalhar diretamente com o DOM
+        this.calculando = calculando;
+        this.calcula = ""; //Valor que o usuário está digitando
     }
 
     //adiciona digitos da calculadora
@@ -29,45 +29,45 @@ class Calculado {
         if(calculando.innerText === "" && operacao !== "C"){
             //Mudança de operação
             if(this.preverOperacaoTexto.innerText !== ""){
-                this.mudaOperacao(operacao)
+                this.mudaOperacao(operacao);
             }
-            return
+            return;
         }
 
 
         //Pegando os valores atuais e os recorrente
         let valorDaOperacao
-        const prever = +this.preverOperacaoTexto.innerText.split(" ")[0] //metodo split(para a string do vetor ser ordenado para uma sustring em um array e retorna array, soma na previsão)
+        const prever = +this.preverOperacaoTexto.innerText.split(" ")[0]; //metodo split(para a string do vetor ser ordenado para uma sustring em um array e retorna array, soma na previsão)
         const recorrente = +this.calculando.innerText //valor passado anterior para valor numerico
 
-        switch(operacao){ //verificando a operação
+        switch(operacao){ 
             case "+":
-                valorDaOperacao = prever + recorrente
-                this.atualizaTela(valorDaOperacao, operacao, recorrente, prever)
+                valorDaOperacao = prever + recorrente;;
+                this.atualizaTela(valorDaOperacao, operacao, recorrente, prever);
                 break
             case "-":
-                valorDaOperacao = prever - recorrente
-                this.atualizaTela(valorDaOperacao, operacao, recorrente, prever)
+                valorDaOperacao = prever - recorrente;;
+                this.atualizaTela(valorDaOperacao, operacao, recorrente, prever);
                 break
             case "/":
-                valorDaOperacao = prever / recorrente
-                this.atualizaTela(valorDaOperacao, operacao, recorrente, prever)
+                valorDaOperacao = prever / recorrente;;
+                this.atualizaTela(valorDaOperacao, operacao, recorrente, prever);
                 break
             case "*":
-                valorDaOperacao = prever * recorrente
-                this.atualizaTela(valorDaOperacao, operacao, recorrente, prever)
+                valorDaOperacao = prever * recorrente;;
+                this.atualizaTela(valorDaOperacao, operacao, recorrente, prever);
                 break
             case "DEL":
-                this.processaDel()
+                this.processaDel();
                 break
             case "CE":
-                this.limpaOperacaoRecorrente()
+                this.limpaOperacaoRecorrente();
                 break
             case "C":
-                this.limpaTodaOperacao()
+                this.limpaTodaOperacao();
                 break
             case "=":
-                this.resultadoDaOperacao()
+                this.resultadoDaOperacao();
                 break
             default: //retorno para operação que não é válida
                 return
@@ -82,27 +82,25 @@ class Calculado {
         prever = null, 
         recorrente = null
         ){ //metodo para ter acesso ao this.calculando
-        console.log(valorDaOperacao, operacao, recorrente, prever)
-
         if (valorDaOperacao === null) {
-            this.calculando.innerText += this.calcula //concatenando os valores
+            this.calculando.innerText = this.calcula //concatenando os valores
         }else {
             //checar se o valor é zero, se não adiciona o valor recorrente
             if(prever === 0){
-                valorDaOperacao = recorrente
+                valorDaOperacao = recorrente;
             }
 
             //Jogando o valor da parte debaixo para cima
-            this.preverOperacaoTexto.innerText = `${valorDaOperacao} ${operacao}` //aparece o valor em cima
-            this.calculando.innerText = "" //limpa o valor debaixo
+            this.preverOperacaoTexto.innerText = `${valorDaOperacao} ${operacao}`; //aparece o valor em cima
+            this.calculando.innerText = ""; //limpa o valor debaixo
         }
     }
 
     //Mudando a operação
     mudaOperacao(operacao){
-        const mathOperations = ["*", "/", "+", "-"]
-        if (!mathOperations.includes(operacao)) {
-            return
+        const operacaoMatematica = ["*", "-", "+", "/"];
+        if (!operacaoMatematica.includes(operacao)) {
+            return;
         }
         //substitui o ultimo operador
         this.preverOperacaoTexto.innerText = this.preverOperacaoTexto.innerText.slice(0, -1) + operacao
@@ -135,14 +133,14 @@ class Calculado {
 const calculadora = new Calculado(preverOperacaoTexto, calculando) //instancia para executar os métoodos de entrada da lógica (if e else)
 
 
-
-//Eventos que irão acontecer para a calculadora funcionar, tipo separar numeros de operadores
+//Iterando sobre todos os botões e adicionando um evento de clique a cada um
 botoes.forEach((botao /*nome individual de cada botão*/) => {
-    botao.addEventListener/*adicionando um evento*/("click", (e) => {
-        const value = e.target.innerText //valor do botão clicado
-        if (+value /*converte valor em numero*/ >= 0 || value === ".") { //se ele não for numero >= 0  então...
+    botao.addEventListener/*adicionando um evento*/("click", (evento) => { //Quando um botão é clicado, este bloco de código é executado
+        const value = evento.target.innerText //Obtendo o texto do botão clicado
+        //Verificando se o valor é um número ou um ponto
+        if (+value /*converte valor em numero*/ >= 0 || value === ".") { //// Se for um número ou um ponto, chame o método para adicionar o dígito à calculadora
             calculadora.adicionaDigito(value)
-        }else { //se ele não tem valor de numero, então é reconhecido como operação
+        }else { // Se não for um número, é reconhecido como uma operação, e chamamos o método correspondente
             calculadora.valoresOPeradores(value)
         }
     })
