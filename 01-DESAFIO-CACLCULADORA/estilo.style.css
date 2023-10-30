@@ -26,7 +26,7 @@ header {
 
 .cabecalho {
     margin: 0;
-    text-align: left;    
+    text-align: center;    
 }
 
 .cabecalho img {
@@ -34,7 +34,7 @@ header {
 }
 
 h1 {
-    text-align: left;
+    text-align: center;
 }
 
 /* Estilos para a seção da calculadora */
